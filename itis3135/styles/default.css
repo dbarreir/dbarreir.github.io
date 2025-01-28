@@ -1,4 +1,11 @@
-h1, h2, .centered-text {
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+    font-family: sans-serif;
+    background-color: antiquewhite;
+}
+
+h1, h2, h3, p, .centered-text {
     text-align: center;
 }
 
@@ -8,6 +15,87 @@ a {
 }
 
 a:hover, a:focus {
-    color: black;
+    color: chocolate;
     text-decoration: none;
+}
+
+h4 {
+    margin: .5rem 0;
+    text-align: center;
+}
+
+.center-image {
+    margin: 0 auto;
+    display: block;
+}
+
+.footer-flex-container ul, nav ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 .2em;
+}
+
+.footer-flex-container ul li {
+    list-style: none;
+    padding: 0 .4em;
+}
+
+nav ul li::before {
+    content: '\f089';
+    font-family: 'FontAwesome';
+}
+
+.linkedin::before {
+    content: '\f08c';
+    font-family: 'FontAwesome';
+    padding-right: .3rem;
+}
+
+.github::before {
+    content: '\f09b';
+    font-family: 'FontAwesome';
+    padding-right: .3rem;
+}
+
+.github-io::before {
+    content: '\f113';
+    font-family: 'FontAwesome';
+    padding-right: .3rem;
+}
+
+.graduation-cap::before {
+    content: '\f19d';
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer figure {
+    display: flex;
+    justify-content: center;
+}
+
+footer figure img {
+    height: 40px;
+}
+
+.introduction img {
+    height: 200px;
+}
+
+.introduction figcaption {
+    font-style: italic;
+    text-align: center;
+    margin-top: .3rem;
+}
+
+.box-text {
+    max-width: 900px;
+    margin: 0 auto;
 }
