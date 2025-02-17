@@ -82,7 +82,7 @@ footer figure {
 }
 
 footer figure img {
-    height: 40px;
+    height: 35px;
 }
 
 .introduction img {
@@ -98,4 +98,8 @@ footer figure img {
 .box-text {
     max-width: 900px;
     margin: 0 auto;
+}
+
+.box-text p {
+    text-align: left;
 }
