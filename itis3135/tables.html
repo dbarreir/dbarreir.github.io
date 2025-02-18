@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Diana Barreiro Gonsalve's Delightful Bear | ITIS3135 | >Tables</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>HTML Tables - Company</h2>
+        <h3>My Tabular Data</h3>
+        <h3>Employee Data in Simple Table</h3>
+        <table class="centered-text">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr>
+                <td>Lucas Moreira</td>
+                <td>lucas.moreira@barreirohub.org</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Ana Ribeiro</td>
+                <td>ana.ribeiro@barreirohub.org</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Tiago Fernandes</td>
+                <td>tiago.fernandes@barreirohub.org</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Sofia Martins</td>
+                <td>sofia.martins@barreirohub.org</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>João Almeida</td>
+                <td>joao.almeida@barreirohub.org</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>Beatriz Costa</td>
+                <td>beatriz.costa@barreirohub.org</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Ricardo Nunes</td>
+                <td>ricardo.nunes@barreirohub.org</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Carla Mendes</td>
+                <td>carla.mendes@barreirohub.org</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Miguel Santos</td>
+                <td>miguel.santos@barreirohub.org</td>
+                <td>34</td>
+            </tr>
+        </table>
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+            <table>
+                <tr>
+                    <th id="cat">Category</th>
+                    <th id="name">Name</th>
+                    <th id="email">Email</th>
+                    <th id="years">Years of Service</th>
+                    <th id="salary">Monthly Salary</th>
+                </tr>
+                <tr>
+                    <th headers="cat" rowspan="3" id="market">Marketing</th>
+                    <td headers="market name">Lucas Moreira</td>
+                    <td headers="market email">lucas.moreira@barreirohub.org</td>
+                    <td headers="market years">17</td>
+                    <td headers="market salary">$55,000</td>
+                </tr>
+                <tr>
+                    <td headers="market name">Sofia Martins</td>
+                    <td headers="market email">sofia.martins@barreirohub.org</td>
+                    <td headers="market years">25</td>
+                    <td headers="market salary">$51,000</td>
+                </tr>
+                <tr>
+                    <td headers="market name">Beatriz Costa</td>
+                    <td headers="market email">beatriz.costa@barreirohub.org</td>
+                    <td headers="market years">12</td>
+                    <td headers="market salary">$49,000</td>
+                </tr>
+                <tr>
+                    <th headers="cat" rowspan="3" id="hr">Human Resources</th>
+                    <td headers="hr name">Ana Ribeiro</td>
+                    <td headers="hr email">ana.ribeiro@barreirohub.org</td>
+                    <td headers="hr years">32</td>
+                    <td headers="hr salary">$52,000</td>
+                </tr>
+                <tr>
+                    <td headers="hr name">Tiago Fernandes</td>
+                    <td headers="hr email">tiago.fernandes@barreirohub.org</td>
+                    <td headers="hr years">8</td>
+                    <td headers="hr salary">$48,000</td>
+                </tr>
+                <tr>
+                    <td headers="hr name">Carla Mendes</td>
+                    <td headers="hr email">carla.mendes@barreirohub.org</td>
+                    <td headers="hr years">21</td>
+                    <td headers="hr salary">$50,000</td>
+                </tr>
+                <tr>
+                    <th headers="cat" rowspan="3" id="it">IT & Development</th>
+                    <td headers="it name">João Almeida</td>
+                    <td headers="it email">joao.almeida@barreirohub.org</td>
+                    <td headers="it years">39</td>
+                    <td headers="it salary">$75,000</td>
+                </tr>
+                <tr>
+                    <td headers="it name">Ricardo Nunes</td>
+                    <td headers="it email">ricardo.nunes@barreirohub.org</td>
+                    <td headers="it years">5</td>
+                    <td headers="it salary">$72,000</td>
+                </tr>
+                <tr>
+                    <td headers="it name">Miguel Santos</td>
+                    <td headers="it email">miguel.santos@barreirohub.org</td>
+                    <td headers="it years">34</td>
+                    <td headers="it salary">$78,000</td>
+                </tr>
+                <tr>
+                    <th id="total" colspan="3">Total Years of Service</th>
+                    <td headers="total">193</td>
+                    <td headers="total">$530,000</td>
+                </tr>
+            </table>
+        </figure>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.min.js"></script>
+    <script src="scripts/validation.js"></script>
+</body>
+</html>

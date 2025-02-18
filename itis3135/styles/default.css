@@ -103,3 +103,25 @@ footer figure img {
 .box-text p {
     text-align: left;
 }
+
+figure figcaption {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    padding: .5rem;
+}
+
+figure table tr {
+    background-color: saddlebrown;
+    color: antiquewhite;
+}
+
+figure table tr:nth-child(even) {
+    background-color: burlywood;
+    color: black;
+}
