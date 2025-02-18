@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Comic Papyrus';
+    src: url('Comic Papyrus.ttf');
+}
+
+.papyrus-font {
+    font-family: papyrus;
+}
+
+.comic-sans-font {
+    font-family: 'Comic Sans MS';
+}
+
+.comic-papyrus-font {
+    font-family: 'Comic Papyrus';
+}
+
+.huge-text {
+    font-size: 10rem;
+    text-decoration: underline;
+}
+
+.background-paragraph {
+    background-color: black;
+    color: midnightblue;
+}
+
+.border-paragraph {
+    border: 100px solid black;
+    border-left-style: dashed;
+    border-right-style: groove;
+    border-bottom-style: dotted;
+}

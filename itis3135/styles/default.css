@@ -51,6 +51,12 @@ nav ul li::before {
     font-family: 'FontAwesome';
 }
 
+.secondary ul li::before {
+    content: '\f070';
+    margin-right: .25rem;
+    font-family: 'FontAwesome';
+}
+
 .linkedin::before {
     content: '\f08c';
     font-family: 'FontAwesome';
