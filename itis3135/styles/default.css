@@ -3,6 +3,8 @@
 body {
     font-family: sans-serif;
     background-color: antiquewhite;
+    max-width: 1200px;
+    margin: auto;
 }
 
 h1, h2, h3, p, .centered-text {
@@ -135,4 +137,112 @@ figure table tr {
 figure table tr:nth-child(even) {
     background-color: burlywood;
     color: black;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+form fieldset > label {
+    margin-bottom: .25rem;
+}
+
+/* Form styles theme */
+input[type="text"], input[type="tel"], input[type="email"], select {
+    margin-bottom: .5rem;
+    display: block;
+    height: calc(1.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; 
+}
+
+select {
+    height: calc(2.25rem + 2px);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    input[type="text"], input[type="tel"], input[type="email"], select {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; 
+    } 
+}
+
+input[type="text"]::-ms-expand, input[type="tel"]::-ms-expand, input[type="email"]::-ms-expand, select::-ms-expand {
+    background-color: transparent;
+    border: 0; 
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, select:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #e2e0fa;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(210, 105, 30, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(210, 105, 30, .25); 
+}
+
+input[type="text"]:disabled, input[type="text"][readonly], 
+input[type="password"]:disabled, input[type="tel"][readonly], 
+input[type="email"]:disabled, input[type="email"][readonly], 
+select:disabled, select[readonly] {
+    background-color: #e9ecef;
+    opacity: 1; 
+}
+
+.secondary-button {
+    width: fit-content;
+    padding: .7rem .9rem;
+    border-radius: .5rem;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 1rem;
+}
+
+.primary-button:hover, .secondary-button:hover {
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    border: 1px solid cornflowerblue;
+    background-color: transparent;
+    color: cornflowerblue;
+}
+
+.primary-button {
+    width: fit-content;
+    padding: .7rem .9rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    border: 1px solid chocolate;
+    background-color: chocolate;
+    color: white;
+    margin-right: 1rem;
+}
+
+.primary-button:hover {
+    border: 1px solid chocolate;
+    background-color: transparent;
+    color: chocolate;
+}
+
+.button-actions {
+    display: flex;
+    justify-content: center;
+    gap: .4rem;
+    margin-top: 1rem;
 }

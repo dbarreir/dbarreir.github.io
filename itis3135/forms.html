@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Diana Barreiro Gonsalve's Delightful Bear | ITIS3135 | Forms</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Forms</h2>
+        <form method="POST" action="#">
+            <fieldset>
+                <legend>Data</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="e.g. John Smith" size="30" required>
+                <label for="tel">Phone number:</label>
+                <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" size="10" placeholder="e.g. 000-11-222">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g. user@email.com" size="30" required>
+            </fieldset>
+            <fieldset>
+                <legend>Hobbies</legend>
+                <span><input type="checkbox" id="games" name="hobby" value="games"> <label for="games">Games</label></span>
+                <span><input type="checkbox" id="reading" name="hobby" value="reading"> <label for="reading">Reading</label></span>
+                <span><input type="checkbox" id="lazy" name="hobby" value="lazy"> <label for="lazy">Being lazy</label></span>
+            </fieldset>
+            <fieldset>
+                <legend>Sex</legend>
+                <span><input type="radio" id="male" name="sex" value="male"> <label for="male">Male</label></span>
+                <span><input type="radio" id="female" name="sex" value="female"> <label for="female">Female</label></span>
+            </fieldset>
+            <fieldset>
+                <legend>Rate us</legend>
+                <label for="likeness">How much do you like this form?</label>
+                <select name="likeness" id="likeness">
+                    <option value="">-- Select --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </fieldset>
+            <div class="button-actions">
+                <input type="reset" class="secondary-button">
+                <input type="submit" class="primary-button">
+            </div>
+        </form>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.min.js"></script>
+    <script src="scripts/validation.js"></script>
+</body>
+</html>
