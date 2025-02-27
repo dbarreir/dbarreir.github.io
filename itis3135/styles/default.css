@@ -4,7 +4,8 @@ body {
     font-family: sans-serif;
     background-color: antiquewhite;
     max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1, h2, h3, p, .centered-text {
@@ -36,6 +37,7 @@ h4 {
     justify-content: center;
     padding-left: 0;
     margin-top: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -173,14 +175,6 @@ select {
     height: calc(2.25rem + 2px);
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-    input[type="text"], input[type="tel"], input[type="email"], select {
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none; 
-    } 
-}
-
 input[type="text"]::-ms-expand, input[type="tel"]::-ms-expand, input[type="email"]::-ms-expand, select::-ms-expand {
     background-color: transparent;
     border: 0; 
@@ -245,4 +239,49 @@ select:disabled, select[readonly] {
     justify-content: center;
     gap: .4rem;
     margin-top: 1rem;
+}
+
+
+/* Media queries */
+
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    body {
+        width: 90%;
+    }
+
+    .table {
+        overflow-x: auto;
+    }
+}
+
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    body {
+        width: 90%;
+    }
+
+    .table {
+        overflow-x: auto;
+    }
+}
+
+/* Rule Overrides For Mobile Devices */
+
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    body {
+        width: 90%;
+    }
+
+    .table {
+        overflow-x: auto;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    input[type="text"], input[type="tel"], input[type="email"], select {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; 
+    } 
 }
