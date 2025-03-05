@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Diana Barreiro Gonsalve's Delightful Bear | ITIS3135 | BYO Intro</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page</h3>
+        <form id="survey-form">
+            <fieldset>
+                <legend>Basic data:</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="Diana Barreiro Gonsalve" required>
+                <label for="mascot">Mascot:</label>
+                <input type="text" id="mascot" name="mascot" value="Delightful Bear" required>
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                <label for="caption">Image Caption:</label>
+                <input type="text" id="caption" name="caption" value="Classic ID photo" required>
+            </fieldset>
+            <fieldset>
+                <legend>Background data:</legend>
+                <label for="personal-background">Personal Background:</label>
+                <textarea id="personal-background" name="personal-background" cols="50" rows="5" required>Born in Spain. Doing one year here at UNC Charlotte as an exchange student.</textarea>
+                <label for="professional-background">Professional Background:</label>
+                <textarea id="professional-background" name="professional-background" cols="50" rows="5" required>I've worked in 3 companies over the last 6 years, all of them related to web development.</textarea>
+                <label for="academic-background">Academic Background:</label>
+                <textarea id="academic-background" name="academic-background" cols="50" rows="5" required>I did a vocational training course in "Cross-Platform App Development".</textarea>
+                <label for="web-dev-background">Background in Web Development:</label>
+                <textarea id="web-dev-background" name="web-dev-background" cols="50" rows="5" required>Did a random class in web development and since then I'm trying to learn as much as I can related to programming and web development.</textarea>
+                <label for="programming-background">Programming/Software Background:</label>
+                <textarea id="programming-background" name="programming-background" cols="50" rows="5" required>PHP, C#, Java.</textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Platform and courses:</legend>
+                <label for="primary-computer-platform">Primary Computer Platform:</label>
+                <input type="text" id="primary-computer-platform" name="primary-computer-platform" value="Windows, laptop." required>
+                <strong>Courses currently taking:</strong>
+                <div id="courses-container">
+                    <div id="course">
+                        <label for="course-1">Course name:</label>
+                        <input type="text" id="course-1" name="courses[]" value="ITIS-3135 Web-Based Application Design and Development">
+                        <label for="reason-1">Reason:</label>
+                        <textarea name="reasons[]" id="reason-1" cols="50" rows="5">I think it could help me improve some aspects that I may know and hopefully learn something new.</textarea>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" id="add-course" class="primary-button">Add Course</button>
+                    <button type="button" id="remove-course" class="secondary-button">Remove Course</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Other data:</legend>
+                <label for="something-funny">Something funny?</label>
+                <textarea id="something-funny" name="something-funny" cols="50" rows="5">I like playing the guitar and the piano. In another life, I would love to work professionally in something related to music.</textarea>
+                <label for="anything-else">Anything else?</label>
+                <textarea id="anything-else" name="anything-else" cols="50" rows="5">I love cats...</textarea>
+            </fieldset>
+            <label for="agreement">
+                <input type="checkbox" id="agreement" name="agreement" checked required>
+                I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+            </label>
+            <div class="action-buttons">
+                <input type="submit" id="submit" value="Submit" class="primary-button">
+                <input type="reset" id="reset" value="Reset" class="secondary-button">
+            </div>
+        </form>
+        <div class="introduction" id="introduction"></div>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.min.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>

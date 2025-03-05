@@ -32,7 +32,7 @@ h4 {
     display: block;
 }
 
-.footer-flex-container ul, nav ul {
+footer ul, nav ul {
     display: flex;
     justify-content: center;
     padding-left: 0;
@@ -45,7 +45,7 @@ nav ul li {
     padding: 0 .2em;
 }
 
-.footer-flex-container ul li {
+footer ul li {
     list-style: none;
     padding: 0 .4em;
 }
@@ -141,21 +141,24 @@ figure table tr:nth-child(even) {
     color: black;
 }
 
-form fieldset {
+fieldset #courses-container {
+    margin-top: .5rem;
+}
+
+fieldset, fieldset #course {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-form fieldset > label {
+fieldset > label {
     margin-bottom: .25rem;
 }
 
 /* Form styles theme */
-input[type="text"], input[type="tel"], input[type="email"], select {
+input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select, textarea {
     margin-bottom: .5rem;
     display: block;
-    height: calc(1.25rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -169,18 +172,23 @@ input[type="text"], input[type="tel"], input[type="email"], select {
     -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; 
+
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select {
+    height: calc(1.25rem + 2px);
 }
 
 select {
     height: calc(2.25rem + 2px);
 }
 
-input[type="text"]::-ms-expand, input[type="tel"]::-ms-expand, input[type="email"]::-ms-expand, select::-ms-expand {
+input[type="text"]::-ms-expand, input[type="tel"]::-ms-expand, input[type="email"]::-ms-expand, input[type="number"]::-ms-expand, select::-ms-expand {
     background-color: transparent;
     border: 0; 
 }
 
-input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, select:focus {
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
     color: #495057;
     background-color: #fff;
     border-color: #e2e0fa;
@@ -192,9 +200,14 @@ input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, se
 input[type="text"]:disabled, input[type="text"][readonly], 
 input[type="password"]:disabled, input[type="tel"][readonly], 
 input[type="email"]:disabled, input[type="email"][readonly], 
+input[type="number"]:disabled, input[type="number"][readonly],
 select:disabled, select[readonly] {
     background-color: #e9ecef;
     opacity: 1; 
+}
+
+input[type="file"] {
+    margin-bottom: .5rem;
 }
 
 .secondary-button {
@@ -234,13 +247,16 @@ select:disabled, select[readonly] {
     color: chocolate;
 }
 
-.button-actions {
+.action-buttons {
     display: flex;
     justify-content: center;
     gap: .4rem;
     margin-top: 1rem;
 }
 
+input, textarea {
+    font-family: sans-serif;
+}
 
 /* Media queries */
 
@@ -279,7 +295,7 @@ select:disabled, select[readonly] {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-    input[type="text"], input[type="tel"], input[type="email"], select {
+    input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select {
         -webkit-transition: none;
         -o-transition: none;
         transition: none; 
