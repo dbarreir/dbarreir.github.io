@@ -83,6 +83,7 @@ document.getElementById('submit').addEventListener('click', (e) => {
     if (formData === undefined) {
         return;
     }
+    document.getElementsByTagName('h3')[0].style.display = 'none'; // Hide h3
     form.style.display = 'none'; // Hide form
     const formattedData = `
         <h3>${formData.name} | ${formData.mascot}</h3>
