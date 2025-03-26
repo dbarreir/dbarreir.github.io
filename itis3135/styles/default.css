@@ -155,6 +155,10 @@ fieldset > label {
     margin-bottom: .25rem;
 }
 
+ul li {
+    margin-bottom: .25rem;
+}
+
 /* Form styles theme */
 input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select, textarea {
     margin-bottom: .5rem;
