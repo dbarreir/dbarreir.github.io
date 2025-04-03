@@ -2,8 +2,10 @@ const removeCourseButton = document.getElementById('remove-course');
 const coursesContainer = document.getElementById('courses-container');
 const introductionOutput = document.getElementById('introduction');
 const form = document.getElementById('survey-form');
+const resetIntroduction = document.getElementById('reset-form');
 let courseLength = coursesContainer.querySelectorAll('#courses-container div').length;
 removeCourseButton.style.display = 'none';
+resetIntroduction.style.display = 'none';
 
 document.getElementById('add-course').addEventListener('click', () => {
     courseLength++;
@@ -29,13 +31,18 @@ removeCourseButton.addEventListener('click', () => {
     }
 });
 
-// Should also reset the default value?
 document.getElementById('reset').addEventListener('click', () => {
     while (courseLength > 1) {
         courseLength--;
         coursesContainer.removeChild(coursesContainer.children[courseLength]);
     }
     removeCourseButton.style.display = 'none';
+});
+
+resetIntroduction.addEventListener('click', () => {
+    form.style.display = 'block';
+    introductionOutput.innerHTML = '';
+    resetIntroduction.style.display = 'none';
 });
 
 const hasValue = (element) => {
@@ -51,21 +58,21 @@ const getValues = () => {
         'web-dev-background', 'programming-background', 'primary-computer-platform'
     ];
     let formData = {};
-    if (image === undefined) {
-        introductionOutput.innerHTML += `<p style="color: red;">Please upload an image.</p>`;
-    }
     dataNames.forEach((element) => {
         const data = document.getElementById(element);
         hasValue(data);
         formData[element.replace(/\-/g, '_')] = data.value;
     });
+    if (!document.getElementById('agreement').checked) {
+        introductionOutput.innerHTML += `<p style="color: red;">Please check agreement.</p>`;
+    }
     if (introductionOutput.innerHTML) {
         return undefined;
     }
-    // Finish filling out the data form and return it
+    // Finish filling out the data form and return it to display information
     formData['something_funny'] = document.getElementById('something-funny').value;
     formData['anything_else'] = document.getElementById('anything-else').value;
-    formData['image'] = URL.createObjectURL(image);
+    formData['image'] = image === undefined ? document.getElementById('default-image').src : URL.createObjectURL(image);
     let coursesData = ``;
     coursesContainer.querySelectorAll('#courses-container div').forEach((course, index) => {
         const courseName = course.children["course-" + (index + 1)].value;
@@ -83,8 +90,9 @@ document.getElementById('submit').addEventListener('click', (e) => {
     if (formData === undefined) {
         return;
     }
-    document.getElementsByTagName('h3')[0].style.display = 'none'; // Hide h3
+    document.getElementsByTagName('h3')[0].style.display = 'none'; // Hide h3 title
     form.style.display = 'none'; // Hide form
+    resetIntroduction.style.display = 'block';
     const formattedData = `
         <h3>${formData.name} | ${formData.mascot}</h3>
         <figure>
@@ -93,17 +101,17 @@ document.getElementById('submit').addEventListener('click', (e) => {
         </figure>
         <div class="box-text">
             <ul>
-                <li><b>Personal background:</b> ${formData.personal_background}</li>
-                <li><b>Professional background:</b> ${formData.professional_background}</li>
-                <li><b>Academic background:</b> ${formData.academic_background}</li>
-                <li><b>Background in this subject:</b> ${formData.web_dev_background}</li>
-                <li><b>Programming/Software Background:</b> ${formData.programming_background}</li>
-                <li><b>Primary Computer Platform:</b> ${formData.primary_computer_platform}</li>
+                <li><strong>Personal background:</strong> ${formData.personal_background}</li>
+                <li><strong>Professional background:</strong> ${formData.professional_background}</li>
+                <li><strong>Academic background:</strong> ${formData.academic_background}</li>
+                <li><strong>Background in this subject:</strong> ${formData.web_dev_background}</li>
+                <li><strong>Programming/Software Background:</strong> ${formData.programming_background}</li>
+                <li><strong>Primary Computer Platform:</strong> ${formData.primary_computer_platform}</li>
                 <li>
-                    <b>Courses I'm Taking &amp; Why:</b> ${formData.courses}
+                    <strong>Courses I'm Taking &amp; Why:</strong> ${formData.courses}
                 </li>
-                <li><b>Funny/Interesting item about yourself:</b> ${formData.something_funny ? formData.something_funny : 'pass'}</li>
-                <li><b>I'd also like to share:</b> ${formData.anything_else ? formData.anything_else : 'pass'}</li>
+                <li><strong>Funny/Interesting item about yourself:</strong> ${formData.something_funny ? formData.something_funny : 'pass'}</li>
+                <li><strong>I'd also like to share:</strong> ${formData.anything_else ? formData.anything_else : 'pass'}</li>
             </ul>
         </div>
     `;

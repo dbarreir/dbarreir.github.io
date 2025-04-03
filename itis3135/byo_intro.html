@@ -21,6 +21,7 @@
                 <input type="text" id="mascot" name="mascot" value="Delightful Bear" required>
                 <label for="image">Image:</label>
                 <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                <img src="images/profile.jpg" alt="Profile image" id="default-image" width="100">
                 <label for="caption">Image Caption:</label>
                 <input type="text" id="caption" name="caption" value="Classic ID photo" required>
             </fieldset>
@@ -72,6 +73,9 @@
             </div>
         </form>
         <div class="introduction" id="introduction"></div>
+        <div class="action-buttons">
+            <button type="button" id="reset-form" class="primary-button hide">Reset</button>
+        </div>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/include.min.js"></script>
