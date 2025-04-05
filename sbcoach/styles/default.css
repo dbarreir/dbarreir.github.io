@@ -1,6 +1,7 @@
 :root {
-    --primary-color: #0060df;
-    --secondary-color: #2A9D8F;
+    --primary-color: #0060DF;
+    --gold-pastel: #FFEBCC;
+    --grey-color: #F4F6FA;
 }
 
 * {
@@ -16,11 +17,8 @@ h1 {
 }
 
 h2 {
-    margin-top: 0.83em;
-}
-
-h3 {
-    margin-bottom: 1em;
+    margin: 0.83em 0;
+    text-align: center;
 }
 
 a {
@@ -32,8 +30,8 @@ a:hover {
     color: var(--secondary-color);
 }
 
-section h2 {
-    text-align: center;
+ul {
+    padding-left: 1rem;
 }
 
 .primary-button {
@@ -52,6 +50,10 @@ section h2 {
     border: 1px solid var(--primary-color);
     background-color: transparent;
     color: var(--primary-color);
+}    
+
+.gold-pastel {
+    background-color: var(--gold-pastel);
 }
 
 /*==============================
@@ -59,13 +61,35 @@ section h2 {
 ================================*/
 header {
     padding: 2rem 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 header nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
+}
+
+.logo {
+    color: #000;
+}
+
+header nav figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav figcaption {
+    font-size: 1.5rem;
+    font-weight: bold;;
+}
+
+header nav img {
+    width: 50px;
 }
 
 /*==============================
@@ -82,24 +106,80 @@ header nav {
 }
 
 /*==============================
+=>  Main Section
+================================*/
+.home {
+    background-color: var(--grey-color);
+}
+
+/*==============================
 =>  Hero Section
 ================================*/
+.home .hero-section {
+    background: url("/sbcoach/images/backgroundHome.jpg") 50% 100% no-repeat fixed;
+    background-size: 100%;
+}
+
+.about-me .hero-section {
+    background: url("/sbcoach/images/backgroundAboutMe.jpg") 50% 50% no-repeat fixed;
+    background-size: 100%;
+}
+
+.services .hero-section {
+    background: url("/sbcoach/images/backgroundServices.jpg") 50% 50% no-repeat fixed;
+    background-size: 100%;
+}
+
 .hero-section {
+    padding: 0;
     height: 80vh;
-    background: url("/sbcoah/images/backgroundHome.jpg") 50% 50% no-repeat fixed; /* Should only be on home */
+}
+
+.hero-section article {
+    height: 80vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #FFF;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--gold-pastel);
+}
+
+.hero-section h1{
+    font-size: 3rem;
 }
 
 /*==============================
 =>  Section
 ================================*/
 section {
-    padding: 1rem 10rem;
+    padding: 3rem 10rem;
+}
+
+.services-section {
+    background-color: #FFF;
+}
+
+.about-section p {
+    margin-bottom: 1rem;
+}
+
+.information-section {
+    display: flex;
+    justify-content: center;
+    background-color: var(--grey-color);
+}
+
+.information-section h2 {
+    text-align: left;
+}
+
+.information-section article {
+    width: calc(50% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 2rem;
 }
 
 /*==============================
@@ -107,25 +187,55 @@ section {
 ================================*/
 .boxes {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .boxes article {
-    width: fit-content;
-    max-width: 250px;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;  
+    width: calc(25% - 2rem);
+    padding: 1.5rem 2rem;
     border: 1px solid var(--primary-color);
     border-radius: .5rem;
-    box-shadow: .1rem .2rem 0 .2rem rgba(0, 96, 223, .15);    
+    box-shadow: .1rem .2rem 0 .2rem rgba(0, 96, 223, .15);
+}
+
+/*==============================
+=>  Portfolio Section
+================================*/
+.portfolio-section h1 {
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+}
+
+.portfolio .portfolio-row {
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.portfolio-row img {
+    width: 100%;
+    height: auto;
 }
 
 /*==============================
 =>  Form Section
 ================================*/
 input[type="text"], input[type="email"], textarea {
+    width: calc(100% - .5rem);
     margin-bottom: .5rem;
     display: block;
-    padding: .375rem .75rem;
+    padding: .375rem .5rem;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
@@ -138,11 +248,10 @@ input[type="text"], input[type="email"], textarea {
     -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; 
-
 }
 
 input[type="text"], input[type="email"] {
-    height: calc(1.25rem + 2px);
+    height: calc(1.7rem + 2px);
 }
 
 input[type="text"]::-ms-expand, input[type="email"]::-ms-expand {
@@ -164,11 +273,101 @@ label {
     margin-bottom: .25rem;
 }
 
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.result {
+    margin-top: 1rem;
+}
+
 /*==============================
 =>  Footer Section
 ================================*/
 footer {
-    margin-top: 2rem;
-    padding: 2rem 0;
+    padding: 4rem 0;
     text-align: center;
+}
+
+/*==============================
+=>  Accordion Section
+================================*/
+.accordion-container {
+    margin: 0 auto;
+    border: 3px solid var(--grey-color);
+    overflow: hidden;
+}
+
+.accordion-trigger {
+    display: block;
+    background-color: var(--grey-color);
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-icon {
+    transition: transform 0.5s;
+}
+
+.accordion-item[open] .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-item:not(:first-of-type) .accordion-trigger {
+    border-top: 3px solid silver;
+}
+
+.accordion-content p {
+    margin: 2rem;
+}
+
+
+/*==============================
+=>  Divider Section
+================================*/
+.curved-divider {
+width: 100%;
+height: 80px;
+background-color: var(--gold-pastel);
+border-top-left-radius: 50%;
+border-top-right-radius: 50%;
+}
+
+/*==============================
+=>  Media Queries
+================================*/
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 951px ) and ( max-width: 1400px ) {
+    .boxes article {
+        width: calc(50% - 2rem);
+    }
+}
+
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 950px )  {
+    section {
+        padding: 1rem 5rem;
+    }
+    
+    .boxes article {
+        width: 100%;
+    }
+}
+
+/* Rule Overrides For Mobile Devices */
+@media screen and ( max-width: 600px ) {
+    section {
+        padding: 1rem 2rem;
+    }
+
+    .boxes article {
+        width: 100%;
+    }
 }

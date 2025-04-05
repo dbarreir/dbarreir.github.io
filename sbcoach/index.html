@@ -5,12 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/default.css">
         <title>SBCoach - Inicio</title>
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!-- Header section -->
         <header>
             <nav>
-                <img src="" alt="Logo SBCoach">
+                <a href="index.html" class="logo">
+                    <figure>
+                        <img src="images/logoSBCoachSmall.jpeg" alt="Logo SBCoach">
+                        <figcaption>SBCoach</figcaption>
+                    </figure>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
@@ -20,35 +25,126 @@
                 </ul>
             </nav>
         </header>
+        <!-- Main content section -->
         <main class="home">
             <section class="hero-section">
-                <h1>SBCoach</h1>
+                <article>
+                    <h1>SBCoach</h1>
+                </article>
             </section>
-            <section>
+			<!-- Services section -->
+            <section class="services-section">
                 <h2>Servicios</h2>
+                <!-- Container of each service -->
                 <div class="boxes">
                     <article>
-                        <h3>Title</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia mollis mauris. Nunc iaculis sem vitae ex elementum, ultricies porttitor tellus scelerisque. Phasellus non justo ultrices, congue erat vitae, maximus orci. Nulla rhoncus rutrum finibus.
-                        </p>
+                        <h3>Coaching de Desarrollo Personal</h3>
+						<p><strong>Duración:</strong> 4 sesiones (1 hora cada una)</p>
+                        <p><strong>Ideal para:</strong> Personas que desean mejorar su bienestar y alcanzar objetivos personales.</p>
+						<div>
+							<p><strong>Incluye:</strong></p>
+							<ul>
+								<li>Identificación de metas personales</li>
+								<li>Trabajo en autoconfianza y motivación</li>
+								<li>Técnicas de gestión emocional</li>
+								<li>Plan de acción personalizado</li>
+							</ul>
+						</div>
+						<p><strong>Precio:</strong> 300€</p>
+                    </article>
+                    <article>
+                        <h3>Coaching para Transiciones Profesionales</h3>
+						<p><strong>Duración:</strong> 6 sesiones (1 hora cada una)</p>
+                        <p><strong>Ideal para:</strong> Quienes buscan cambiar de trabajo o mejorar su carrera.</p>
+						<div>
+							<p><strong>Incluye:</strong></p>
+							<ul>
+								<li>Definición de objetivos profesionales</li>
+								<li>Desarrollo de habilidades de empleabilidad</li>
+								<li>Optimización de CV y perfil de LinkedIn</li>
+								<li>Preparación para entrevistas</li>
+							</ul>
+						</div>
+						<p><strong>Precio:</strong> 400€</p>
+                    </article>
+                    <article>
+                        <h3>Coaching para la Gestión del Estrés y Bienestar</h3>
+						<p><strong>Duración:</strong> 5 sesiones (1 hora cada una)</p>
+                        <p><strong>Ideal para:</strong> Personas que buscan reducir el estrés y mejorar su calidad de vida.</p>
+						<div>
+							<p><strong>Incluye:</strong></p>
+							<ul>
+								<li>Técnicas de relajación y mindfulness</li>
+								<li>Estrategias para equilibrar vida personal y laboral</li>
+								<li>Identificación de factores de estrés y gestión del tiempo</li>
+							</ul>
+						</div>
+						<p><strong>Precio:</strong> 350€</p>
+                    </article>
+                    <article>
+                        <h3>Coaching de Liderazgo Personal</h3>
+						<p><strong>Duración:</strong> 8 sesiones (1 hora cada una)</p>
+                        <p><strong>Ideal para:</strong> Quienes desean fortalecer su liderazgo y toma de decisiones.</p>
+						<div>
+							<p><strong>Incluye:</strong></p>
+							<ul>
+								<li>Desarrollo de habilidades de liderazgo</li>
+								<li>Comunicación efectiva y toma de decisiones</li>
+								<li>Gestión del tiempo y productividad</li>
+								<li>Plan de crecimiento personal</li>
+							</ul>
+						</div>
+						<p><strong>Precio:</strong> 600€</p>
                     </article>
                 </div>
             </section>
-            <section class="form">
+            <!-- Why section -->
+            <section class="information-section">
+                <article>
+                    <h2>¿En qué áreas puedo trabajar contigo?</h2>
+                    <div>
+                        <p>Puedes trabajar conmigo en temas como:</p>
+                        <ul>
+                            <li>Gestión emocional y autoestima</li>
+                            <li>Comunicación y relaciones personales</li>
+                            <li>Toma de decisiones y claridad mental</li>
+                            <li>Cambio profesional o reinvención</li>
+                            <li>Equilibrio entre vida personal y laboral</li>
+                            <li>Objetivos de desarrollo personal</li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <h2>¿Cuál es la diferencia entre coaching, terapia y mentoring?</h2>
+                    <div>
+                        <ul>
+                            <li>Coaching: Se enfoca en el presente y en el futuro, ayudándote a alcanzar metas concretas.</li>
+                            <li>Terapia: Trabaja con el pasado y el presente, abordando heridas emocionales o trastornos.</li>
+                            <li>Mentoring: Implica que una persona con experiencia guía a otra desde su propio conocimiento.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <!-- Divider -->
+            <div class="curved-divider"></div>
+			<!-- Contact section -->
+            <section class="contact-form gold-pastel">
                 <h2>Contacto</h2>
-                <form id="contacto">
+                <form class="form" id="contact">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre">
+                    <input type="text" name="nombre" id="nombre" required>
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                     <label for="asunto">Asunto:</label>
-                    <textarea id="asunto" name="asunto"></textarea>
-                    <input type="submit" value="Enviar" class="primary-button">
+                    <textarea id="asunto" name="asunto" cols="10" rows="5" required></textarea>
+                    <input type="submit" id="submit" value="Enviar" class="primary-button">
+                    <div id="output" class="result"></div>
                 </form>
             </section>
         </main>
-        <footer>
+        <script src="scripts/default.js"></script>
+        <!-- Footer section -->
+        <footer class="gold-pastel">
             <p>&copy; 2025 - Page designed by Barreiro Hub</p>
         </footer>
     </body>
