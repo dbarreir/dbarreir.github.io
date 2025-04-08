@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3, p, .centered-text {
+h1, h2, h3, .centered-text {
     text-align: center;
 }
 
@@ -98,6 +98,10 @@ footer figure {
 
 footer figure img {
     height: 35px;
+}
+
+footer p {
+    text-align: center;
 }
 
 .introduction img {
@@ -264,6 +268,94 @@ input[type="file"] {
 
 input, textarea {
     font-family: sans-serif;
+}
+
+/* Slideshow */
+.slideshow {
+    padding-bottom: 3rem;
+}
+
+.slideshow-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto
+}
+
+.slide {
+    display: none;
+    margin: 0;
+}
+
+.slide img {
+    vertical-align: middle;
+}
+
+.slide figcaption {
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev,
+.next {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+    display: block;
+}
+
+.next {
+    right: 0;
+}
+
+.dots {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 /* Media queries */
