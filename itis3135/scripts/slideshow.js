@@ -1,11 +1,11 @@
 let slideIndex = 1;
 let slideTimeout = 0;
+let slides = document.getElementsByClassName("slide");
+let dots = document.getElementsByClassName("dot");
 
 function showSlides(n) {
     clearTimeout(slideTimeout); // In case it's called from a button, reset timeout
     let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
@@ -20,7 +20,6 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    slideTimeout = setTimeout(plusSlides, 2000);
 }
 
 function plusSlides(n) {
