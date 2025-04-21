@@ -8,30 +8,11 @@
     </head>
     <body>
         <!-- Header section -->
-        <header>
-            <nav>
-                <a href="index.html" class="logo">
-                    <figure>
-                        <img src="images/logoSBCoachSmall.jpeg" alt="Logo SBCoach">
-                        <figcaption>SBCoach</figcaption>
-                    </figure>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="sobre_mi.html">Sobre mi</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div data-include="components/header.html"></div>        
         <!-- Main content section -->
         <main class="home">
-            <section class="hero-section">
-                <article>
-                    <h1>SBCoach</h1>
-                </article>
-            </section>
+            <!-- Hero section-->
+            <div data-include="components/hero_section.html"></div>
 			<!-- Services section -->
             <section class="services-section">
                 <h2>Servicios</h2>
@@ -100,8 +81,9 @@
             </section>
             <!-- Why section -->
             <section class="information-section">
+                <h2>Algunas preguntas frecuentes</h2>
                 <article>
-                    <h2>¿En qué áreas puedo trabajar contigo?</h2>
+                    <h3>¿En qué áreas puedo trabajar contigo?</h3>
                     <div>
                         <p>Puedes trabajar conmigo en temas como:</p>
                         <ul>
@@ -115,7 +97,7 @@
                     </div>
                 </article>
                 <article>
-                    <h2>¿Cuál es la diferencia entre coaching, terapia y mentoring?</h2>
+                    <h3>¿Cuál es la diferencia entre coaching, terapia y mentoring?</h3>
                     <div>
                         <ul>
                             <li>Coaching: Se enfoca en el presente y en el futuro, ayudándote a alcanzar metas concretas.</li>
@@ -144,8 +126,7 @@
         </main>
         <script src="scripts/default.js"></script>
         <!-- Footer section -->
-        <footer class="gold-pastel">
-            <p>&copy; 2025 - Page designed by Barreiro Hub</p>
-        </footer>
+        <div data-include="components/footer.html" data-replace="%class%:gold-pastel"></div>
+        <script src="scripts/include.min.js"></script>
     </body>
 </html>

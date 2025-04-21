@@ -8,43 +8,31 @@
     </head>
     <body>
         <!-- Header section -->
-        <header>
-            <nav>
-                <a href="index.html" class="logo">
-                    <figure>
-                        <img src="images/logoSBCoachSmall.jpeg" alt="Logo SBCoach">
-                        <figcaption>SBCoach</figcaption>
-                    </figure>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="sobre_mi.html">Sobre mi</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div data-include="components/header.html"></div>
         <!-- Main content section -->
         <main>
+            <!-- Portfolio section -->
             <section class="portfolio-section">
                 <h1>Portfolio</h1>
-                <article class="portfolio">
+                <div class="portfolio">
                     <div class="portfolio-row">
                         <img src="images/portfolio1.jpg" alt="Image portfolio 1">
-                    </div>
-                    <div class="portfolio-row">
                         <img src="images/portfolio2.jpg" alt="Image portfolio 2">
-                    </div>
-                    <div class="portfolio-row">
                         <img src="images/portfolio3.jpg" alt="Image portfolio 3">
                     </div>
-                </article>
+                    <div class="portfolio-row">
+                        <img src="images/portfolio4.jpg" alt="Image portfolio 4">
+                        <img src="images/portfolio5.jpg" alt="Image portfolio 5">
+                    </div>
+                    <div class="portfolio-row">
+                        <img src="images/portfolio6.jpg" alt="Image portfolio 6">
+                        <img src="images/portfolio7.jpg" alt="Image portfolio 6">
+                    </div>
+                </div>
             </section>
         </main>
         <!-- Footer section -->
-        <footer>
-            <p>&copy; 2025 - Page designed by Barreiro Hub</p>
-        </footer>
+        <div data-include="components/footer.html" data-replace="%class%:"></div>
+        <script src="scripts/include.min.js"></script>
     </body>
 </html>

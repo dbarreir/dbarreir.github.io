@@ -8,30 +8,11 @@
     </head>
     <body>
         <!-- Header section -->
-        <header>
-            <nav>
-                <a href="index.html" class="logo">
-                    <figure>
-                        <img src="images/logoSBCoachSmall.jpeg" alt="Logo SBCoach">
-                        <figcaption>SBCoach</figcaption>
-                    </figure>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="sobre_mi.html">Sobre mi</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div data-include="components/header.html"></div>
         <!-- Main content section -->
         <main class="about-me">
-            <section class="hero-section">
-                <article>
-                    <h1>SBCoach</h1>
-                </article>
-            </section>
+            <!-- Hero section -->
+            <div data-include="components/hero_section.html"></div>
 			<!-- About section -->
             <section class="about-section">
                 <h2>Sobre mi</h2>
@@ -47,8 +28,7 @@
             </section>
         </main>
         <!-- Footer section -->
-        <footer>
-            <p>&copy; 2025 - Page designed by Barreiro Hub</p>
-        </footer>
+        <div data-include="components/footer.html" data-replace="%class%:"></div>
+        <script src="scripts/include.min.js"></script>
     </body>
 </html>
